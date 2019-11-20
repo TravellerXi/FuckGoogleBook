@@ -10,8 +10,11 @@ from selenium.webdriver.support.ui import Select
 import time
 import os
 driverOptions = webdriver.ChromeOptions()
-driverOptions.add_argument(r"user-data-dir=C:\Users\quant\AppData\Local\Google\Chrome\User Data")
+driverOptions.add_argument(r"user-data-dir=C:\Users\quant\AppData\Local\Google\Chrome\User Data")#较为重要，读取Chrome浏览器已登录用户的profie。
+#否则，在selenium驱动的情况下，googleBook无法登录。
+#现在，既然能加载profile，那么先登录GoogleBook再加载selenium即可。
 
+#PR 和PA一个是前言部分一个是正文。
 driver = webdriver.Chrome("chromedriver",0,driverOptions)
 driver.get('https://play.google.com/books/reader?id=sp7fDgAAQBAJ&hl=zh_CN&pg=GBS.PR1')
 time.sleep(10)
