@@ -30,10 +30,5 @@ while (PR<499):
     bookname='C:\\Users\\quant\\Desktop\\PDF\\'+'正式'+str(PR)+'.png'
     time.sleep(3)
     driver.get_screenshot_as_file(bookname)
-    # fillchange=driver.find_element_by_xpath('//input[@class="gb-pagecontrol-input"]').click()
-    # fillchange.clear()
-    # fillchange.send_keys('10')
-    # fillchange.send_keys(Keys.RETURN)
-    #time.sleep(3)
     PR=PR+1
 exit()
