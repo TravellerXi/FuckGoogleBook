@@ -17,6 +17,7 @@ driverOptions.add_argument(r"user-data-dir=C:\Users\quant\AppData\Local\Google\C
 #PR 和PA一个是前言部分一个是正文。
 driver = webdriver.Chrome("chromedriver",0,driverOptions)
 driver.get('https://play.google.com/books/reader?id=sp7fDgAAQBAJ&hl=zh_CN&pg=GBS.PR1')
+#URL是当前浏览的URL
 time.sleep(10)
 URL="https://play.google.com/books/reader?id=sp7fDgAAQBAJ&hl=zh_CN&pg=GBS.PA"
 PR=160
