@@ -18,10 +18,12 @@ driverOptions.add_argument(r"user-data-dir=C:\Users\quant\AppData\Local\Google\C
 #PR 和PA一个是前言部分一个是正文。
 driver = webdriver.Chrome("chromedriver",0,driverOptions)
 driver.get('https://play.google.com/books/reader?id=sp7fDgAAQBAJ&hl=zh_CN&pg=GBS.PR1')
-#URL是当前浏览的URL
+#URL是当前GoogleBook浏览的URL
 time.sleep(10)
 URL="https://play.google.com/books/reader?id=sp7fDgAAQBAJ&hl=zh_CN&pg=GBS.PA"
 PR=160
+
+#理论上，针对PR和PA，都可以使用以下函数来获取，不过多说明，只留一个函数
 
 while (PR<499):
     driver.get(URL+str(PR))
@@ -29,7 +31,7 @@ while (PR<499):
     # page=driver.find_element_by_id('gb-pagecontrol-input')
     sreach_window = driver.current_window_handle
     time.sleep(3)
-    bookname='C:\\Users\\quant\\Desktop\\PDF\\'+'正式'+str(PR)+'.png'
+    bookname='C:\\Users\\quant\\Desktop\\PDF\\'+'正式'+str(PR)+'.png' #file location
     time.sleep(3)
     driver.get_screenshot_as_file(bookname)
     PR=PR+1
