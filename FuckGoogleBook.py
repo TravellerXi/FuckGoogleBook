@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding:utf-8
 #author:https://github.com/TravellerXi
 from selenium import webdriver
